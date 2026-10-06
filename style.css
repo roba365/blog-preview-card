@@ -14,18 +14,25 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 24px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 384px;
+  width: 100%;
+  max-width: 384px;
   background-color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 7%);
   border-radius: 20px;
   box-shadow: 8px 8px 0px 0px hsl(0, 0%, 7%);
   padding: 24px;
   gap: 24px;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 12px 12px 0px 0px hsl(0, 0%, 7%);
 }
 
 .card-image {
@@ -41,6 +48,7 @@ body {
 }
 
 .card-category {
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
   font-weight: 800;
   padding: 4px 12px;
   border-radius: 4px;
@@ -48,14 +56,27 @@ body {
   width: fit-content;
 }
 
-.card-title {
-  font-size: 24px;
+.card-date {
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+}
+
+.card-title a {
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
   font-weight: 800;
+  color: hsl(0, 0%, 7%);
   line-height: 1.2;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.card-title a:hover,
+.card-title a:focus {
+  color: hsl(47, 88%, 63%);
+  cursor: pointer;
 }
 
 .card-description {
-  font-size: 16px;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
   line-height: 1.5;
   color: hsl(0, 0%, 42%);
 }
@@ -72,5 +93,6 @@ body {
 }
 
 .author-name {
+  font-size: clamp(0.8125rem, 2vw, 0.875rem);
   font-weight: 800;
 }
