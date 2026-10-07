@@ -6,7 +6,7 @@
 
 body {
   font-family: "Figtree", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: hsl(0, 0%, 7%);
   background-color: hsl(47, 88%, 63%);
@@ -14,44 +14,44 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 24px;
+  padding: 1.5rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 384px;
+  max-width: 24rem;
   background-color: hsl(0, 0%, 100%);
   border: 1px solid hsl(0, 0%, 7%);
-  border-radius: 20px;
+  border-radius: 1.25rem;
   box-shadow: 8px 8px 0px 0px hsl(0, 0%, 7%);
-  padding: 24px;
-  gap: 24px;
+  padding: 1.5rem;
+  gap: 1.5rem;
   transition: box-shadow 0.2s ease;
 }
 
 .card:hover {
-  box-shadow: 12px 12px 0px 0px hsl(0, 0%, 7%);
+  box-shadow: 0.75rem 0.75rem 0px 0px hsl(0, 0%, 7%);
 }
 
 .card-image {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   display: block;
 }
 
 .card-content {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .card-category {
   font-size: clamp(0.75rem, 2vw, 0.875rem);
   font-weight: 800;
-  padding: 4px 12px;
-  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
   background-color: hsl(47, 88%, 63%);
   width: fit-content;
 }
@@ -89,10 +89,16 @@ body {
 }
 
 .author-avatar {
-  width: 32px;
+  width: 2rem;
 }
 
 .author-name {
   font-size: clamp(0.8125rem, 2vw, 0.875rem);
   font-weight: 800;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }
